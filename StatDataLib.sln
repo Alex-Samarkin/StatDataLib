@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatDataLib", "StatDataLib\StatDataLib.csproj", "{CDDFFD68-51C9-4A2A-8E30-5B10BE757DDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{C9394E72-DEDB-4455-91AF-2D9D78223D47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDDFFD68-51C9-4A2A-8E30-5B10BE757DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDFFD68-51C9-4A2A-8E30-5B10BE757DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDDFFD68-51C9-4A2A-8E30-5B10BE757DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDDFFD68-51C9-4A2A-8E30-5B10BE757DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9394E72-DEDB-4455-91AF-2D9D78223D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9394E72-DEDB-4455-91AF-2D9D78223D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9394E72-DEDB-4455-91AF-2D9D78223D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9394E72-DEDB-4455-91AF-2D9D78223D47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3328E7C6-25A5-44FA-9847-F01DCA22BE0E}
+	EndGlobalSection
+EndGlobal
