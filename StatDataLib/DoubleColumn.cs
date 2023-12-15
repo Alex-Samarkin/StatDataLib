@@ -30,7 +30,7 @@ namespace StatDataLib
         */
         public DoubleColumn Zeros(int n) => (DoubleColumn)Fill(n, 0);
         public DoubleColumn Ones(int n) => (DoubleColumn)Fill(n, 1);
-        public DoubleColumn Seq(int start, int step = 1)
+        public DoubleColumn Seq(double start, double step = 1)
         {
             Set(0, start);
             for (int i = 1; i < Count; i++)
