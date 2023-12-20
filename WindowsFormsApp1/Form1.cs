@@ -87,12 +87,15 @@ namespace WindowsFormsApp1
         {
             chart1.Series.Clear();
             var ss = new Series();
-            ss.ChartType = SeriesChartType.Line;
+            ss.ChartType = SeriesChartType.FastLine;
             for (int i = 0; i < C1.Values.Count; i++)
             {
                 var point = new DataPoint();
                 ///
-
+                point.XValue = C1.Values[i];
+                point.SetValueY(D1[i]);
+                point.Label = i.ToString();
+                ss.Points.Add(point);
                 ///
                 ss.Points.Add(point);
             }

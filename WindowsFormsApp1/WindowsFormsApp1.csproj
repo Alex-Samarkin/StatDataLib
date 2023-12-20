@@ -67,6 +67,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\StatDataLib.DoubleColumn.datasource" />
+    <None Include="Properties\DataSources\StatDataLib.HeadBase.datasource" />
+    <None Include="Properties\DataSources\StatDataLib.IntColumn.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
