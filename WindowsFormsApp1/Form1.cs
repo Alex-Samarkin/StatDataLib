@@ -100,12 +100,83 @@ namespace WindowsFormsApp1
                 ss.Points.Add(point);
             }
             chart1.Series.Add(ss);
+            chart1.ChartAreas[0].RecalculateAxesScale();
 
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            // Sort data in D1 values
+            var data = D1.Values.OrderBy(x=>x).ToList();
+            var c = data.Count();
+            // Find median and LQ and HQ
+            var median = data[c / 2];
+            var LQ = data[c / 4];
+            var HQ = data[c / 4 * 3];
+            var IQR = HQ - LQ;
+            // Find count of bins according one of the stats rules
+            // Sturgess rule is
+            // var KBins = (int)(Math.Round(Math.Log(c, 2))) + 1;
+            var KBins = (int)Math.Round(3.322 * Math.Log10(c)) + 1;
+            // find a borders of bins
+            var min = data.Min();
+            var max = data.Max();
+            var h = (max- min)/KBins;
+            // calculate count of data in every bin
+            // Clear C1 before calculating
+
+            for (var i = 0; i < KBins; i++)
+            {
+                var low = min+ i*h - h/2.0;
+                var high = low + h;
+                // lambda function
+                // понятие замыкания
+                var c1 = data.Count(x=> (x > low && x <= high ));
+                
+                // Add data to C1
+            }
+            //
+            listBox1.DataSource = null;
+            listBox1.DataSource = C1.Values;
+
+            // Show bar graph
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            if( C1.Count > 0 )
+            {
+                D1.Clear();
+                for (int i = 0;i < C1.Count;i++)
+                {
+                    var phi = C1.Values[i]/10.0;
+                    D1.Add(Math.Sin(phi));
+                }
+                listBox2.DataSource = null;
+                listBox2.DataSource = D1.Values;
+                toolStripButton6_Click(sender, e);
+            }
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            if (C1.Count > 0)
+            {
+                D1.Clear();
+                for (int i = 0; i < C1.Count; i++)
+                {
+                    var phi = C1.Values[i] / 10.0;
+                    D1.Add(Math.Sin(phi));
+                }
+                listBox2.DataSource = null;
+                listBox2.DataSource = D1.Values;
+                toolStripButton6_Click(sender, e);
+            }
         }
     }
 }
